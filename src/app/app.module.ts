@@ -5,16 +5,21 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { PersonComponent } from './person/person.component';
 import { GetLastSalaryPipe } from './pipes/getLastSalary.pipe';
+import { FormTestComponent } from './person/formTest/formTest.component';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [	
     AppComponent,
     PersonComponent,
-    GetLastSalaryPipe
+    GetLastSalaryPipe,
+    FormTestComponent,
+    
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

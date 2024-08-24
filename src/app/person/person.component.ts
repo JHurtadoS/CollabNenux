@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ShareComponentServiceService } from '../services/shareComponentService.service';
 
 @Component({
   selector: 'app-person',
@@ -7,20 +8,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class PersonComponent implements OnInit {
 
-  nombre: string = "Linares Pablo";
-  edad: number = 54;
-  email: string = "test@gmail.com";
-  activo: boolean = true;
-  sueldos: number[] = [10000, 20000, 3000];
+  constructor(private service:ShareComponentServiceService){}
 
-  constructor() { }
 
-  getTotalSalary(): number {
-    return this.sueldos.reduce((ac, curr) => ac + curr, 0);
-  }
+  contador:number=0
 
   ngOnInit() {
-    // Inicialización si es necesario
+    console.log(this.service.getVontador()); 
   }
+  
 
 }

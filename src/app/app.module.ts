@@ -7,6 +7,8 @@ import { PersonComponent } from './person/person.component';
 import { GetLastSalaryPipe } from './pipes/getLastSalary.pipe';
 import { FormTestComponent } from './person/formTest/formTest.component';
 import { FormsModule } from '@angular/forms';
+import { RowComponent } from './table/row/row.component';
+import { TableComponent } from './table/table/table.component';
 
 @NgModule({
   declarations: [	
@@ -14,12 +16,14 @@ import { FormsModule } from '@angular/forms';
     PersonComponent,
     GetLastSalaryPipe,
     FormTestComponent,
+    RowComponent,
+    TableComponent
     
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule
+    FormsModule 
   ],
   providers: [],
   bootstrap: [AppComponent]

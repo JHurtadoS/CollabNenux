@@ -1,0 +1,11 @@
+<div class=" px-16 mt-10">
+<div class="grid grid-cols-4 gap-4 bg-gray-100 p-4 font-bold mb-3"  >
+  <div class=" text-center">Nombre</div>
+  <div class=" text-center">Edad</div>
+  <div class=" text-center">Sueldo</div>
+  <div class=" text-center">Estado</div>
+</div>
+<div *ngFor="let item of employees" class="border-b">
+  <app-employ [employ]="item" />
+</div>
+</div>

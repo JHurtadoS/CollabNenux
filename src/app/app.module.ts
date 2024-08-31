@@ -9,6 +9,9 @@ import { FormTestComponent } from './person/formTest/formTest.component';
 import { FormsModule } from '@angular/forms';
 import { RowComponent } from './table/row/row.component';
 import { TableComponent } from './table/table/table.component';
+import { TableEmploysComponent } from './table2/table-employs/table-employs.component';
+import { EmployComponent } from './table2/employ/employ.component';
+
 
 @NgModule({
   declarations: [	
@@ -17,7 +20,9 @@ import { TableComponent } from './table/table/table.component';
     GetLastSalaryPipe,
     FormTestComponent,
     RowComponent,
-    TableComponent
+    TableComponent,
+    TableEmploysComponent,
+    EmployComponent
     
   ],
   imports: [

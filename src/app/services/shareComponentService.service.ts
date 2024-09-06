@@ -6,24 +6,15 @@ import { BehaviorSubject } from 'rxjs';
 })
 export class ShareComponentServiceService {
 
-
   private contador =  new BehaviorSubject<number>(0)
 
-
-  // constructor() {
-  //   this.contador = 0
-  // }
-
-
   sumContador(){
-    this.contador.next(1)
+    const valorActual = this.contador.value;
+    this.contador.next(valorActual + 1);
   }
-  
+
   getVontador(){
     return this.contador.asObservable()
   }
-
-
-
 
 }

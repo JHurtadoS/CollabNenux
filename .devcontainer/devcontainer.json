@@ -1,0 +1,31 @@
+{
+  "name": "Ubuntu",
+  "image": "mcr.microsoft.com/devcontainers/base:ubuntu-22.04",
+  "features": {
+    "ghcr.io/devcontainers/features/node:1": {}
+  },
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "alexiv.vscode-angular2-files",
+        "Angular.ng-template",
+        "johnpapa.Angular2",
+        // "WallabyJs.console-ninja",
+        "ms-vscode-remote.remote-containers",
+        "ms-azuretools.vscode-docker",
+        "usernamehw.errorlens",
+        "VisualStudioExptTeam.vscodeintellicode",
+        "xabikos.JavaScriptSnippets",
+        "ms-vscode.vscode-typescript-next",
+        "christian-kohler.path-intellisense",
+        "bradlc.vscode-tailwindcss",
+        "meganrogge.template-string-converter",
+        "vscode-icons-team.vscode-icons"
+      ]
+    }
+  },
+  "postCreateCommand": "npm install -g @angular/cli && npm i",
+  "forwardPorts": [
+    4200
+  ]
+}

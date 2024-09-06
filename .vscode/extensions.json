@@ -1,4 +1,17 @@
 {
   // For more information, visit: https://go.microsoft.com/fwlink/?linkid=827846
-  "recommendations": ["angular.ng-template"]
+  "recommendations": [
+    "angular.ng-template",
+    "usernamehw.errorlens",
+    "ms-vscode-remote.remote-containers",
+    "johnpapa.angular2",
+    "alexiv.vscode-angular2-files",
+    "visualstudioexptteam.vscodeintellicode",
+    "xabikos.javascriptsnippets",
+    "ms-vscode.vscode-typescript-next",
+    "christian-kohler.path-intellisense",
+    "bradlc.vscode-tailwindcss",
+    "meganrogge.template-string-converter",
+    "vscode-icons-team.vscode-icons"
+  ]
 }

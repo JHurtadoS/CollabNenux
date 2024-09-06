@@ -1,0 +1,13 @@
+
+
+
+<div class="grid grid-cols-4 gap-4 border-black">
+  <span class=" font-bold">{{item?.codigo}}</span>
+  <span>{{item?.descripcion}}</span>
+  <span>{{item?.precio}}</span>
+  <div>
+  <button class=" mx-4" (click)="deleteItem.emit(item)" >Eliminar</button>
+  <button class=" mx-4"  (click)="selectItem.emit(item)" >Seleccionar</button>
+</div>
+
+</div>

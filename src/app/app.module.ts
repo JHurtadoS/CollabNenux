@@ -5,18 +5,23 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { GetLastSalaryPipe } from './pipes/getLastSalary.pipe';
 import { FormsModule } from '@angular/forms';
-import { TestComponent1Component } from './test-component-1/test-component-1.component';
-import { TestComponent2Component } from './test-component-2/test-component-2.component';
-import { WrapperTestComponent } from './WrapperTest/WrapperTest.component';
+import { RowComponent } from './table/row/row.component';
+import { TableComponent } from './table/table/table.component';
+import { TableEmploysComponent } from './table2/table-employs/table-employs.component';
+import { EmployComponent } from './table2/employ/employ.component';
+
 
 @NgModule({
   declarations: [
     AppComponent,
     GetLastSalaryPipe,
-TestComponent1Component,
-TestComponent2Component,
-      WrapperTestComponent
-   ],
+    // FormTestComponent,
+    RowComponent,
+    TableComponent,
+    TableEmploysComponent,
+    EmployComponent
+
+  ],
   imports: [
     BrowserModule,
     AppRoutingModule,

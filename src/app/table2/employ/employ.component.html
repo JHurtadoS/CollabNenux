@@ -1,0 +1,13 @@
+<div class="grid grid-cols-4 gap-4 border-black">
+  <span class=" text-center">{{employ?.nombre}}</span>
+  <span class="text-center">{{employ?.edad}}</span>
+  <span class="text-center">{{employ?.sueldo|currency}}</span>
+  <span *ngIf="employ && employ.edad<18;else:adultTemplate" >Menor</span>
+  <div>
+
+</div>
+
+
+<ng-template #adultTemplate>
+  <span>Mayor de edad</span>
+</ng-template>

@@ -1,6 +1,5 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { GetLastSalaryPipe } from './pipes/getLastSalary.pipe';
@@ -9,23 +8,22 @@ import { RowComponent } from './table/row/row.component';
 import { TableComponent } from './table/table/table.component';
 import { TableEmploysComponent } from './table2/table-employs/table-employs.component';
 import { EmployComponent } from './table2/employ/employ.component';
-
+import { ServicesTestingModule } from './modules/services-testing/services-testing.module';
 
 @NgModule({
   declarations: [
     AppComponent,
     GetLastSalaryPipe,
-    // FormTestComponent,
     RowComponent,
     TableComponent,
     TableEmploysComponent,
-    EmployComponent
-
+    EmployComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule
+    FormsModule,
+    ServicesTestingModule
   ],
   providers: [],
   bootstrap: [AppComponent]

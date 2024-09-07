@@ -12,6 +12,7 @@
     "christian-kohler.path-intellisense",
     "bradlc.vscode-tailwindcss",
     "meganrogge.template-string-converter",
-    "vscode-icons-team.vscode-icons"
+    "vscode-icons-team.vscode-icons",
+    "formulahendry.auto-rename-tag"
   ]
 }

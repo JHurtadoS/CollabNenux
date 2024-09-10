@@ -9,6 +9,7 @@ import { TableComponent } from './table/table/table.component';
 import { TableEmploysComponent } from './table2/table-employs/table-employs.component';
 import { EmployComponent } from './table2/employ/employ.component';
 import { ServicesTestingModule } from './modules/services-testing/services-testing.module';
+import { ParImparComponent } from './ngifTest/parImpar/parImpar.component';
 
 @NgModule({
   declarations: [
@@ -18,6 +19,7 @@ import { ServicesTestingModule } from './modules/services-testing/services-testi
     TableComponent,
     TableEmploysComponent,
     EmployComponent,
+    ParImparComponent
   ],
   imports: [
     BrowserModule,

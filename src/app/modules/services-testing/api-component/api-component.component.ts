@@ -14,7 +14,6 @@ export class ProductosComponent implements OnInit {
 
   ngOnInit(): void {
     this.pruebaService.getProductos().subscribe((data) => {
-      // Tomamos los primeros 10 productos por ejemplo
       this.productos = data.slice(0, 10);
     });
   }

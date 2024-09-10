@@ -1,0 +1,17 @@
+<form class=" w-full h-24 flex  justify-center items-center">
+  <input type="number" [(ngModel)]="num1" name="num1">
+  
+  <div *ngIf="num1 % 2 === 0; else impar">
+    <ng-container *ngTemplateOutlet="par"></ng-container>
+  </div>
+  
+  <ng-template #impar>
+    Es Impar
+  </ng-template>
+
+  <ng-template #par>
+    Es Par
+  </ng-template>
+  
+</form>
+

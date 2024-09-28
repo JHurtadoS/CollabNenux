@@ -1,0 +1,7 @@
+<ul class="space-y-4">
+  <li *ngFor="let producto of productos" class="p-4 border rounded-lg shadow-md hover:shadow-lg transition-shadow">
+    <h3 class="text-lg font-semibold text-gray-800">{{ producto.descripcion }}</h3>
+    <p class="text-gray-600">Código: {{ producto.codigo }}</p>
+    <p class="text-gray-800 font-bold">Precio: ${{ producto.precio.toFixed(2) }}</p>
+  </li>
+</ul>

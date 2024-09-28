@@ -10,17 +10,19 @@ import { TableEmploysComponent } from './table2/table-employs/table-employs.comp
 import { EmployComponent } from './table2/employ/employ.component';
 import { ServicesTestingModule } from './modules/services-testing/services-testing.module';
 import { ParImparComponent } from './ngifTest/parImpar/parImpar.component';
+import { TestingServiceComponent } from './testing-service/testing-service.component';
 
 @NgModule({
-  declarations: [
+  declarations: [	
     AppComponent,
     GetLastSalaryPipe,
     RowComponent,
     TableComponent,
     TableEmploysComponent,
     EmployComponent,
-    ParImparComponent
-  ],
+    ParImparComponent,
+      TestingServiceComponent
+   ],
   imports: [
     BrowserModule,
     AppRoutingModule,

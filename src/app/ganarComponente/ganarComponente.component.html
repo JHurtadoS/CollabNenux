@@ -1,0 +1,9 @@
+<div>
+  <h2>Juego de Dados</h2>
+  <app-dado [valor]="num1"></app-dado>
+  <app-dado [valor]="num2"></app-dado>
+  <app-dado [valor]="num3"></app-dado>
+  
+  <button (click)="tirar()">Tirar los Dados</button>
+  <p>{{ resultado() }}</p>
+</div>

@@ -11,9 +11,18 @@ import { EmployComponent } from './table2/employ/employ.component';
 import { ServicesTestingModule } from './modules/services-testing/services-testing.module';
 import { ParImparComponent } from './ngifTest/parImpar/parImpar.component';
 import { TestingServiceComponent } from './testing-service/testing-service.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { GanarComponenteComponent } from './ganarComponente/ganarComponente.component';
+import { DadoComponent } from './dado/dado.component';
+import {MatMenuModule} from '@angular/material/menu';
+import {MatButtonModule} from '@angular/material/button';
+import {MatIconModule} from '@angular/material/icon';
+import { AcercaComponent } from './acerca/acerca.component';
+import { RoutesRoutes } from './routes.routing';
+
 
 @NgModule({
-  declarations: [	
+  declarations: [				
     AppComponent,
     GetLastSalaryPipe,
     RowComponent,
@@ -21,13 +30,21 @@ import { TestingServiceComponent } from './testing-service/testing-service.compo
     TableEmploysComponent,
     EmployComponent,
     ParImparComponent,
-      TestingServiceComponent
+      TestingServiceComponent,
+      GanarComponenteComponent,
+      DadoComponent,
+      AcercaComponent
    ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
-    ServicesTestingModule
+    ServicesTestingModule,
+    BrowserAnimationsModule,
+    MatMenuModule,
+    MatButtonModule,
+    MatIconModule,
+    RoutesRoutes
   ],
   providers: [],
   bootstrap: [AppComponent]

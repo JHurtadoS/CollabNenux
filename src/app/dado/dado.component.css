@@ -1,0 +1,21 @@
+.dado {
+    width: 100px;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid #333;
+    border-radius: 10px;
+    font-size: 24px;
+    background-color: #f9f9f9;
+  }
+  
+  .forma {
+    /* Puedes agregar más estilos para personalizar la clase "forma" */
+    transition: transform 0.3s;
+  }
+  
+  .forma:hover {
+    transform: scale(1.1);
+  }
+  

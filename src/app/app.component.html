@@ -1,4 +1,18 @@
-<app-testing-service></app-testing-service>
+<button mat-icon-button [matMenuTriggerFor]="menu" aria-label="Example icon-button with a menu">
+    <mat-icon>more_vert</mat-icon>
+</button>
+
+<mat-menu #menu="matMenu">
+    <button mat-menu-item [routerLink]="['/ruta1']">
+        <mat-icon>dialpad</mat-icon>
+        <span>Ir a Ganar</span>
+    </button>
+    <button mat-menu-item [routerLink]="['/ruta2']">
+        <mat-icon>format_list_bulleted</mat-icon>
+        <span>Acerca</span>
+    </button>
+</mat-menu>
+
 
 
 <router-outlet></router-outlet>

@@ -1,4 +1,4 @@
-import { NgModule } from '@angular/core';
+import { ChangeDetectorRef, NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -15,14 +15,22 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { GanarComponenteComponent } from './ganarComponente/ganarComponente.component';
 import { DadoComponent } from './dado/dado.component';
 import {MatMenuModule} from '@angular/material/menu';
-import {MatButtonModule} from '@angular/material/button';
 import {MatIconModule} from '@angular/material/icon';
 import { AcercaComponent } from './acerca/acerca.component';
-import { RoutesRoutes } from './routes.routing';
+import { TablaAngularComponent } from './tablaAngular/tablaAngular.component';
+import { MatTableModule } from '@angular/material/table';
+import { MatButtonModule } from '@angular/material/button';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatInputModule } from '@angular/material/input';
+import { MatDialogModule } from '@angular/material/dialog';
+import { ReactiveFormsModule } from '@angular/forms';
+import { DialogCComponent } from './dialog-c/dialog-c.component';
+import { MatPaginatorModule } from '@angular/material/paginator';
+
 
 
 @NgModule({
-  declarations: [				
+  declarations: [							
     AppComponent,
     GetLastSalaryPipe,
     RowComponent,
@@ -33,7 +41,10 @@ import { RoutesRoutes } from './routes.routing';
       TestingServiceComponent,
       GanarComponenteComponent,
       DadoComponent,
-      AcercaComponent
+      AcercaComponent,
+      TablaAngularComponent,
+      TablaAngularComponent,
+      DialogCComponent
    ],
   imports: [
     BrowserModule,
@@ -44,7 +55,13 @@ import { RoutesRoutes } from './routes.routing';
     MatMenuModule,
     MatButtonModule,
     MatIconModule,
-    RoutesRoutes
+    MatFormFieldModule,
+    ReactiveFormsModule,
+    MatTableModule,
+    MatInputModule,
+    MatDialogModule,
+    MatPaginatorModule
+    
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -26,11 +26,12 @@ import { MatDialogModule } from '@angular/material/dialog';
 import { ReactiveFormsModule } from '@angular/forms';
 import { DialogCComponent } from './dialog-c/dialog-c.component';
 import { MatPaginatorModule } from '@angular/material/paginator';
+import { TableroComponent } from './tablero/tablero.component';
 
 
 
 @NgModule({
-  declarations: [							
+  declarations: [								
     AppComponent,
     GetLastSalaryPipe,
     RowComponent,
@@ -44,7 +45,8 @@ import { MatPaginatorModule } from '@angular/material/paginator';
       AcercaComponent,
       TablaAngularComponent,
       TablaAngularComponent,
-      DialogCComponent
+      DialogCComponent,
+      TableroComponent
    ],
   imports: [
     BrowserModule,

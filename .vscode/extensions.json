@@ -13,6 +13,7 @@
     "bradlc.vscode-tailwindcss",
     "meganrogge.template-string-converter",
     "vscode-icons-team.vscode-icons",
-    "formulahendry.auto-rename-tag"
+    "formulahendry.auto-rename-tag",
+    "dbaeumer.vscode-eslint"
   ]
 }

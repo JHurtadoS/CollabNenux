@@ -40,9 +40,4 @@ module.exports = {
       Raleway: ['Raleway', 'serif'],
     },
   },
-  daisyui: {
-    themes: false,
-    darkTheme: 'light',
-  },
-  plugins: [require('daisyui')],
 };

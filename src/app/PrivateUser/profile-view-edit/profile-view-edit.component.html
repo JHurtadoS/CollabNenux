@@ -1,3 +1,18 @@
-<p>
-  profile-view-edit works!
-</p>
+<div class="profile-edit p-6">
+  <h1 class="text-xl font-bold">Editar Perfil</h1>
+
+  <form (submit)="saveProfile()">
+    <!-- Aquí irían los campos para editar el perfil -->
+    <div class="form-group">
+      <label for="name">Nombre</label>
+      <input type="text" id="name" class="border border-gray-300 p-2 rounded" />
+    </div>
+
+    <button
+      type="submit"
+      class="bg-green-500 hover:bg-green-700 text-white font-bold py-2 px-4 rounded mt-4"
+    >
+      Guardar Cambios
+    </button>
+  </form>
+</div>

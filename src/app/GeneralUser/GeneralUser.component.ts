@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'app-GeneralUser',
+  selector: 'app-generaluser',
   templateUrl: './GeneralUser.component.html',
   styleUrls: ['./GeneralUser.component.css']
 })

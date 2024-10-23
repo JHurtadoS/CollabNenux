@@ -1,3 +1,17 @@
-<p>
-  profile-view works!
-</p>
+<div class="profile-view p-6">
+  <h1 class="text-xl font-bold">Perfil del Usuario</h1>
+
+  <div *ngIf="isOwner" class="mt-4">
+    <a
+      [routerLink]="['/profile/edit', profileId]"
+      class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
+    >
+      Editar Perfil
+    </a>
+  </div>
+
+  <div class="profile-info mt-6">
+    <p>ID del perfil: {{ profileId }}</p>
+    <p>Información del perfil...</p>
+  </div>
+</div>

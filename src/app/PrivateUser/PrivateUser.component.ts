@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'app-PrivateUser',
+  selector: 'app-privateuser',
   templateUrl: './PrivateUser.component.html',
   styleUrls: ['./PrivateUser.component.css']
 })

@@ -22,7 +22,7 @@ export class ProfileViewComponent implements OnInit {
 
     if (this.profileId) {
       this.authService.getSession().pipe(
-        map(session => session ? session.userId === this.profileId : false)
+        map(session => session?.user ? session?.user.id === this.profileId : false)
       ).subscribe(isOwner => {
         this.isOwner = isOwner;
       });

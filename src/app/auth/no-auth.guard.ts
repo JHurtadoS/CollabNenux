@@ -10,13 +10,14 @@ export const noAuthGuard: CanActivateFn = () => {
 
   return authService.getSession().pipe(
     map(session => {
+      console.log(session)
       console.log('Guard Session:', session);  // Depura la sesión aquí
       if (!session) {
         console.log('Access granted to login');  // Esto debería aparecer si no hay sesión
         return true;
       } else {
-        console.log('Redirecting to dashboard');  // Esto aparece si hay sesión
-        router.navigate(['/dashboard']);
+        // console.log('Redirecting to dashboard');  // Esto aparece si hay sesión
+        router.navigate([`/profile/${session.user.id}`]);
         return false;
       }
     })

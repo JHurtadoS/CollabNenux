@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
-import { AuthService, LoginResponse } from '../../auth/auth.service';
+import { AuthService, customSession, LoginResponse } from '../../auth/auth.service';
 import { HttpClient } from '@angular/common/http';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Observer } from 'rxjs';
@@ -30,8 +30,11 @@ export class LoginComponent {
 
   loginObserver: Observer<LoginResponse> = {
     next: (response: LoginResponse) => {
-      this.authService.login(response.session);
-      this.router.navigate(['/dashboard']);
+      const dataSession: customSession = { session: response.session, user: response.user }
+      this.authService.login(dataSession);
+      const { user } = response
+      console.log(user)
+      this.router.navigate([`/profile/${user.id}`]);
     },
     error: (err) => {
       this.loading = false;

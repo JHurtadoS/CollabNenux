@@ -13,7 +13,8 @@ export const privateGuard: CanActivateFn = (route: ActivatedRouteSnapshot) => {
 
   return authService.getSession().pipe(
     map(session => {
-      if (session && session.userId === profileId) {
+      console.log(session)
+      if (session && session.user.id === profileId) {
         return true;
       } else {
         router.navigate(['/error']);  // Redirigir si no es el propietario

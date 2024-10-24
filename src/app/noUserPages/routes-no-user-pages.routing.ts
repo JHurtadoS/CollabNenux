@@ -31,6 +31,6 @@ const routes: Routes = [
 
 export class NoUserRoutingModule {
   constructor() {
-    console.log('NoUserRoutingModule Loaded');  // Depuración para verificar si el módulo de rutas está cargando
+    console.log('NoUserRoutingModule Loaded');
   }
 }

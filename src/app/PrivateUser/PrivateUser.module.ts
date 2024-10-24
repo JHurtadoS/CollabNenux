@@ -9,6 +9,8 @@ import { PrivateUserRoutingModule } from './private-user-routing.module.routing'
     CommonModule,
     PrivateUserRoutingModule
   ],
-  declarations: [PrivateUserComponent, ProfileViewEditComponent]
+  declarations: [PrivateUserComponent, ProfileViewEditComponent],
+  exports: [PrivateUserRoutingModule]
+
 })
 export class PrivateUserModule { }

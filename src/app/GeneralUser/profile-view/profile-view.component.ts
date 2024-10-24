@@ -13,7 +13,7 @@ export class ProfileViewComponent implements OnInit {
 
   constructor(
     private route: ActivatedRoute,
-    private router: Router,  // Añadimos el Router para redirigir
+    private router: Router,
     private authService: AuthService
   ) { }
 

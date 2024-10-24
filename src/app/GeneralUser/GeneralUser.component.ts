@@ -6,10 +6,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./GeneralUser.component.css']
 })
 export class GeneralUserComponent implements OnInit {
-
-  constructor() { }
-
-  ngOnInit() {
+  ngOnInit(): void {
+    alert('NoUserPagesComponent Loaded');  // Esta alerta aparecerá cuando se cargue el componente
   }
-
 }

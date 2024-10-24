@@ -2,8 +2,9 @@ import { CanActivateFn } from '@angular/router';
 import { inject } from '@angular/core';
 import { AuthService } from './auth.service';
 import { Router } from '@angular/router';
-import { map } from 'rxjs/operators';
+import { catchError, map } from 'rxjs/operators';
 import { ActivatedRouteSnapshot } from '@angular/router';
+import { of } from 'rxjs';
 
 export const privateGuard: CanActivateFn = (route: ActivatedRouteSnapshot) => {
   const authService = inject(AuthService);
@@ -15,9 +16,15 @@ export const privateGuard: CanActivateFn = (route: ActivatedRouteSnapshot) => {
       if (session && session.userId === profileId) {
         return true;
       } else {
-        router.navigate(['/error']);
+        router.navigate(['/error']);  // Redirigir si no es el propietario
         return false;
       }
+    }),
+    catchError((error) => {
+      console.error('Error en la validación del propietario:', error);
+      router.navigate(['/error']);
+      return of(false);
     })
   );
+
 };

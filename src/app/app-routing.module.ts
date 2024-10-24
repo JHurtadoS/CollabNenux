@@ -1,15 +1,24 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { LoginComponent } from './noUserPages/login/login.component';
+import { RegisterComponent } from './noUserPages/register/register.component';
+import { ProfileViewComponent } from './GeneralUser/profile-view/profile-view.component';
+import { ProfileViewEditComponent } from './PrivateUser/profile-view-edit/profile-view-edit.component';
 
 const routes: Routes = [
-  { path: 'profile', loadChildren: () => import('./GeneralUser/general-user-routing.module').then(m => m.GeneralUserRoutingModule) },
-  { path: 'profile/edit', loadChildren: () => import('./PrivateUser/PrivateUser.module').then(m => m.PrivateUserModule) },
-  { path: 'login', loadChildren: () => import('./noUserPages/noUserPages.module').then(m => m.NoUserPagesModule) },
-  { path: '', redirectTo: 'login', pathMatch: 'full' }  // Redirige a login por defecto si no hay rutas definidas
+  { path: 'login', component: LoginComponent },
+  { path: 'register', component: RegisterComponent },
+  { path: 'profile', component: ProfileViewComponent },
+  { path: 'profile/edit', component: ProfileViewEditComponent },
+  { path: '', redirectTo: 'login', pathMatch: 'full' }
 ];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
   exports: [RouterModule]
 })
-export class AppRoutingModule { }
+export class AppRoutingModule {
+  constructor() {
+    console.log('AppRoutingModule Loaded');
+  }
+}

@@ -8,6 +8,11 @@ interface Session {
   userId: string;
 }
 
+export interface LoginResponse {
+  message: string;
+  session: Session;
+}
+
 @Injectable({
   providedIn: 'root'
 })

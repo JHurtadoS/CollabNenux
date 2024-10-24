@@ -11,6 +11,8 @@ import { GeneralUserRoutingModule } from './general-user-routing.module';
     RouterModule,
     GeneralUserRoutingModule
   ],
-  declarations: [GeneralUserComponent, ProfileViewComponent]
+  declarations: [GeneralUserComponent, ProfileViewComponent],
+  exports: [GeneralUserComponent]
+
 })
 export class GeneralUserModule { }

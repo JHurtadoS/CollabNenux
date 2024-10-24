@@ -1,7 +1,8 @@
 import { inject } from '@angular/core';
 import { CanActivateFn, Router } from '@angular/router';
 import { AuthService } from './auth.service';
-import { map } from 'rxjs/operators';
+import { catchError, map } from 'rxjs/operators';
+import { of } from 'rxjs';
 
 export const authGuard: CanActivateFn = () => {
   const authService = inject(AuthService);
@@ -12,9 +13,14 @@ export const authGuard: CanActivateFn = () => {
       if (session) {
         return true;
       } else {
-        router.navigate(['/login']);
+        router.navigate(['/login']);  // Si no hay sesión, redirigir a login
         return false;
       }
+    }),
+    catchError((error) => {
+      console.error('Error obteniendo la sesión:', error);
+      router.navigate(['/login']);
+      return of(false);
     })
   );
 };

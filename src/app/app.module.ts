@@ -10,7 +10,8 @@ import { GeneralUserModule } from './GeneralUser/GeneralUser.module';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+
   ],
   imports: [
     BrowserModule,

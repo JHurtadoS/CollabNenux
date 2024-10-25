@@ -1,0 +1,38 @@
+.profile-container {
+  @apply p-4 max-w-4xl mx-auto;
+}
+.profile-header {
+  @apply flex items-center space-x-4;
+}
+.profile-image {
+  @apply w-24 h-24 rounded-full bg-orangeC-400 relative cursor-pointer;
+  background-size: cover;
+  background-position: center;
+}
+.profile-info {
+  @apply flex flex-col;
+}
+.profile-username {
+  @apply text-2xl font-Merriweather text-blueC-700;
+}
+.profile-email {
+  @apply text-sm text-gray-600;
+}
+.profile-subscription {
+  @apply bg-blueC-100 text-blueC-700 px-2 py-1 rounded-full;
+}
+.edit-profile-button {
+  @apply mt-2 px-4 py-2 bg-blueC-500 text-white rounded-lg hover:bg-blueC-700;
+}
+.profile-tabs {
+  @apply mt-6 flex space-x-4;
+}
+button {
+  @apply px-4 py-2 font-Raleway rounded-lg hover:bg-blueC-50;
+}
+.active-tab {
+  @apply bg-blueC-500 text-white;
+}
+.profile-content {
+  @apply mt-8;
+}

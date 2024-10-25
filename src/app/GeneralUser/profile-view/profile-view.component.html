@@ -1,17 +1,70 @@
-<div class="profile-view p-6">
-  <h1 class="text-xl font-bold">Perfil del Usuario</h1>
-
-  <div *ngIf="isOwner" class="mt-4">
-    <a
-      [routerLink]="['/profile/edit', profileId]"
-      class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
-    >
-      Editar Perfil
-    </a>
+<div
+  class="profile-container w-full mx-auto mt-8 p-6 bg-white rounded-lg shadow-md"
+>
+  <div
+    class="profile-banner w-full h-64 bg-gray-200 rounded-none mb-8 flex items-center justify-center"
+  ></div>
+  <div class="flex items-center space-x-6 mb-8 relative">
+    <div
+      class="profile-image w-32 h-32 rounded-full bg-orangeC-400 relative cursor-pointer"
+      [ngStyle]="{
+        'background-image': 'linear-gradient(to right, #FF8D42, #FF650C)',
+      }"
+    ></div>
+    <div class="flex flex-col relative w-full">
+      <div class="flex absolute top-0 right-4 space-x-4">
+        <i
+          data-feather="share"
+          class="icon-button w-8 h-8 cursor-pointer bg-black text-white p-[0.35rem] rounded-full transition-all duration-300 hover:bg-opacity-80"
+        ></i>
+        <a (click)="navigateToEdit()">
+          <i
+            data-feather="settings"
+            class="icon-button w-8 h-8 cursor-pointer hover:bg-gray-200 p-[0.35rem] rounded-full transition-all duration-300"
+          ></i>
+        </a>
+      </div>
+      <h1 class="text-4xl font-Merriweather text-blueC-700">
+        {{ userProfile.username }}
+      </h1>
+      <p class="text-lg text-gray-600 mt-2">{{ userProfile.email }}</p>
+      <span
+        class="bg-blueC-100 text-blueC-700 px-3 py-1 mt-2 rounded-full w-max text-sm"
+        >{{ userProfile.subscriptionType }}</span
+      >
+    </div>
   </div>
-
-  <div class="profile-info mt-6">
-    <p>ID del perfil: {{ profileId }}</p>
-    <p>Información del perfil...</p>
+  <nav
+    class="profile-tabs flex space-x-6 justify-center border-b border-gray-300 relative"
+  >
+    <button
+      (click)="selectTab('details')"
+      [ngClass]="{
+        'border-b-2 border-blueC-500 text-blueC-700': selectedTab === 'details',
+        'text-gray-500': selectedTab !== 'details',
+      }"
+      class="px-6 py-3 font-Raleway text-lg hover:text-blueC-700"
+    >
+      Detalles
+    </button>
+    <button
+      (click)="selectTab('projects')"
+      [ngClass]="{
+        'border-b-2 border-blueC-500 text-blueC-700':
+          selectedTab === 'projects',
+        'text-gray-500': selectedTab !== 'projects',
+      }"
+      class="px-6 py-3 font-Raleway text-lg hover:text-blueC-700"
+    >
+      Proyectos
+    </button>
+  </nav>
+  <div class="profile-content mt-8">
+    <app-details-profile
+      *ngIf="selectedTab === 'details'"
+    ></app-details-profile>
+    <app-project-profile
+      *ngIf="selectedTab === 'projects'"
+    ></app-project-profile>
   </div>
 </div>

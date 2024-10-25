@@ -1,0 +1,6 @@
+.projects-container {
+  @apply p-4;
+}
+.project-item {
+  @apply mb-4 p-4 border border-blueC-100 rounded-lg;
+}

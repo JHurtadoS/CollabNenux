@@ -1,7 +1,8 @@
 import { Injectable } from '@angular/core';
 import { BehaviorSubject, interval, Observable } from 'rxjs';
-import * as dayjs from 'dayjs';
+// import * as dayjs from 'dayjs';
 import { map, takeWhile } from 'rxjs/operators';
+import dayjs from '../utils/dayjs-helper';
 
 export interface LoginResponse {
   message: string;

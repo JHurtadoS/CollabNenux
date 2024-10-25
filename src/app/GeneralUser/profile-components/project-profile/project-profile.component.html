@@ -1,0 +1,9 @@
+<div class="p-6 bg-gray-50 rounded-lg shadow-inner">
+  <div
+    *ngFor="let project of projects"
+    class="mb-6 p-4 border border-blueC-100 rounded-lg"
+  >
+    <h3 class="text-xl font-semibold">{{ project.name }}</h3>
+    <p class="text-lg">{{ project.description }}</p>
+  </div>
+</div>

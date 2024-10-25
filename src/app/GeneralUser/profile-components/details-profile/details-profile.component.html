@@ -1,0 +1,15 @@
+<div class="p-6 bg-gray-50 rounded-lg shadow-inner">
+  <h2 class="text-2xl font-semibold mb-4">Biografía</h2>
+  <p class="text-lg mb-4">
+    Hola! Soy un usuario muy curioso que ama la tecnología.
+  </p>
+  <h2 class="text-2xl font-semibold mb-4">Intereses</h2>
+  <ul class="list-disc pl-6">
+    <li
+      *ngFor="let interest of ['Tecnología', 'Ciencia', 'Ciclismo']"
+      class="text-lg"
+    >
+      {{ interest }}
+    </li>
+  </ul>
+</div>

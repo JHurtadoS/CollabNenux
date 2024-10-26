@@ -1,0 +1,21 @@
+<div class="sidebar-container w-64 p-4 bg-gray-100 rounded-lg shadow-md">
+  <div *ngFor="let filter of filters" class="mb-4">
+    <button
+      (click)="toggleFilter(filter)"
+      class="w-full text-left font-bold text-blueC-700"
+    >
+      {{ filter.name }}
+    </button>
+    <div *ngIf="filter.expanded" class="mt-2 pl-4">
+      <div>
+        <input type="checkbox" id="option1" />
+        <label for="option1"> Opción 1</label>
+      </div>
+      <div>
+        <input type="checkbox" id="option2" />
+        <label for="option2"> Opción 2</label>
+      </div>
+    </div>
+  </div>
+  <a href="#" class="text-blueC-500 hover:underline">Ver más</a>
+</div>

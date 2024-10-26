@@ -1,0 +1,19 @@
+<div class="post-card-container p-6 bg-white rounded-lg shadow-md mb-4">
+  <div class="flex items-center mb-4">
+    <!-- Imagen del Avatar del Usuario: Esta debería ser una imagen con el enlace avatar_url, pero dado que los buckets no funcionan bien, se coloca un fondo sólido en su lugar -->
+    <div class="w-12 h-12 rounded-full bg-gray-300 mr-4"></div>
+    <!-- Nombre del Usuario -->
+    <div>
+      <h3 class="text-lg font-bold">{{ post.profiles.full_name }}</h3>
+      <p class="text-gray-500 text-sm">
+        Publicado el {{ post.created_at | date: 'short' }}
+      </p>
+    </div>
+  </div>
+  <!-- Contenido del Post -->
+  <p class="text-gray-700 mb-4">{{ post.content }}</p>
+  <!-- Acciones del Post -->
+  <app-post-actions></app-post-actions>
+  <!-- Sección de comentarios -->
+  <app-comment-input></app-comment-input>
+</div>

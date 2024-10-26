@@ -1,8 +1,9 @@
 import { Component, OnInit, AfterViewInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
-import { AuthService } from 'src/app/auth/auth.service';
+import { AuthService, customSession } from 'src/app/auth/auth.service';
 import { map } from 'rxjs/operators';
 import feather from 'feather-icons';
+import { Project, ProjectServiceForUsersService } from 'src/app/services/project-service-for-users.service';
 
 @Component({
   selector: 'app-profile-view',
@@ -25,7 +26,8 @@ export class ProfileViewComponent implements OnInit, AfterViewInit {
   constructor(
     private route: ActivatedRoute,
     private router: Router,
-    private authService: AuthService
+    private authService: AuthService,
+    private profileService: ProjectServiceForUsersService
   ) { }
 
   userProfile = {
@@ -36,11 +38,40 @@ export class ProfileViewComponent implements OnInit, AfterViewInit {
     interests: ['Tecnología', 'Ciencia', 'Ciclismo'],
     profileImage: '' // URL de la imagen de perfil
   };
-
+  loadingProjects: boolean = false;
+  projects: Project[] = [];
   selectedTab: string = 'details';
 
   selectTab(tab: string) {
     this.selectedTab = tab;
+    if (tab === 'projects') {
+      this.loadProjects();
+    }
+  }
+
+  loadProjects() {
+    this.loadingProjects = true;
+    const session: customSession = JSON.parse(localStorage.getItem('session') || '{}');
+    console.log(session)
+    const userId = session.user?.id;
+    const token = session.session.access_token;
+
+    if (userId && token) {
+      this.profileService.getProjects(userId, token).subscribe(
+        (response: { message: string; projects: Project[] }) => {
+          console.log(response.projects)
+          this.projects = response.projects;
+          this.loadingProjects = false;
+        },
+        (error) => {
+          console.error('Error fetching projects:', error);
+          this.loadingProjects = false;
+        }
+      );
+    } else {
+      console.error('User ID or token is missing.');
+      this.loadingProjects = false;
+    }
   }
 
   ngOnInit(): void {

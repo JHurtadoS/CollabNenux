@@ -1,0 +1,35 @@
+.dialog-title {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #333;
+}
+
+.dialog-content {
+  font-size: 1.2rem;
+  color: #555;
+  margin-bottom: 1rem;
+}
+
+.dialog-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 1rem;
+}
+
+.cancel-button {
+  color: #555;
+}
+
+.logout-button {
+  background-color: #ff5252;
+  color: #fff;
+}
+
+.logout-button:hover {
+  background-color: #ff1744;
+}
+
+.custom-dialog-container {
+  border-radius: 8px;
+  padding: 16px;
+}

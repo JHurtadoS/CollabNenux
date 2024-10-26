@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
+import { Project } from 'src/app/services/project-service-for-users.service';
 
 @Component({
   selector: 'app-project-profile',
@@ -6,12 +7,6 @@ import { Component } from '@angular/core';
   styleUrls: ['./project-profile.component.css']
 })
 export class ProjectProfileComponent {
-
-  // constructor() { }
-
-  projects = [
-    { name: 'Proyecto 1', description: 'Descripción del Proyecto 1.' },
-    { name: 'Proyecto 2', description: 'Descripción del Proyecto 2.' }
-  ];
+  @Input() projects: Project[] | null = null;
 
 }

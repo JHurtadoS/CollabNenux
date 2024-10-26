@@ -6,6 +6,8 @@ import { AppComponent } from './app.component';
 import { PrivateUserModule } from './PrivateUser/PrivateUser.module';
 import { NoUserPagesModule } from './noUserPages/noUserPages.module';
 import { GeneralUserModule } from './GeneralUser/GeneralUser.module';
+import { AuthService } from './auth/auth.service';
+import { MatDialogModule } from '@angular/material/dialog';
 
 
 @NgModule({
@@ -18,9 +20,10 @@ import { GeneralUserModule } from './GeneralUser/GeneralUser.module';
     AppRoutingModule,
     GeneralUserModule,
     PrivateUserModule,
-    NoUserPagesModule
+    NoUserPagesModule,
+    MatDialogModule
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent, AuthService]
 })
 export class AppModule { }

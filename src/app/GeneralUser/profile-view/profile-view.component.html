@@ -63,8 +63,19 @@
     <app-details-profile
       *ngIf="selectedTab === 'details'"
     ></app-details-profile>
-    <app-project-profile
-      *ngIf="selectedTab === 'projects'"
-    ></app-project-profile>
+    <div *ngIf="selectedTab === 'projects'">
+      <div *ngIf="loadingProjects" class="text-center text-lg text-gray-500">
+        Cargando proyectos...
+      </div>
+      <div
+        *ngIf="!loadingProjects && projects.length === 0"
+        class="text-center text-lg text-gray-500"
+      >
+        No hay proyectos disponibles.
+      </div>
+      <div *ngIf="!loadingProjects && projects.length > 0">
+        <app-project-profile [projects]="projects"></app-project-profile>
+      </div>
+    </div>
   </div>
 </div>

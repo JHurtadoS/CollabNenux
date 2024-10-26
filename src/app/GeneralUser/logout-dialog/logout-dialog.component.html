@@ -1,0 +1,19 @@
+<ng-container class="not-tailwind">
+  <h2 mat-dialog-title class="dialog-title">Confirmar Cierre de Sesión</h2>
+  <div mat-dialog-content class="dialog-content">
+    <p>¿Estás seguro de que deseas cerrar sesión?</p>
+  </div>
+  <div mat-dialog-actions class="dialog-actions">
+    <button mat-button (click)="onNoClick()" class="cancel-button">
+      Cancelar
+    </button>
+    <button
+      mat-button
+      color="warn"
+      (click)="onLogoutClick()"
+      class="logout-button"
+    >
+      Cerrar Sesión
+    </button>
+  </div>
+</ng-container>

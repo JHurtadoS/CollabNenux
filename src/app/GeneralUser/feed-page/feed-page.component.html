@@ -1,0 +1,17 @@
+<div class="feed-page-container w-full flex">
+  <!-- Sidebar -->
+  <div class="sidebar w-1/4 p-4">
+    <app-sidebar-filter-post></app-sidebar-filter-post>
+  </div>
+
+  <!-- Main Feed Section -->
+  <div class="feed-content w-3/4 p-6">
+    <!-- Navbar -->
+    <app-navbar (logoutClicked)="openLogoutDialog()"></app-navbar>
+    <!-- Feed Post Container -->
+    <app-feed-post-container
+      [posts]="posts"
+      [loadingPosts]="loadingPosts"
+    ></app-feed-post-container>
+  </div>
+</div>

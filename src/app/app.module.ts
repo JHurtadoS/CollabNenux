@@ -27,11 +27,13 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { DialogCComponent } from './dialog-c/dialog-c.component';
 import { MatPaginatorModule } from '@angular/material/paginator';
 import { TableroComponent } from './tablero/tablero.component';
+import { FormulariosComponent } from './formularios/formularios.component';
+import { FormReactComponent } from './formReact/formReact.component';
 
 
 
 @NgModule({
-  declarations: [								
+  declarations: [										
     AppComponent,
     GetLastSalaryPipe,
     RowComponent,
@@ -46,7 +48,9 @@ import { TableroComponent } from './tablero/tablero.component';
       TablaAngularComponent,
       TablaAngularComponent,
       DialogCComponent,
-      TableroComponent
+      TableroComponent,
+      FormulariosComponent,
+      FormReactComponent
    ],
   imports: [
     BrowserModule,
@@ -62,7 +66,8 @@ import { TableroComponent } from './tablero/tablero.component';
     MatTableModule,
     MatInputModule,
     MatDialogModule,
-    MatPaginatorModule
+    MatPaginatorModule,
+    ReactiveFormsModule
     
   ],
   providers: [],

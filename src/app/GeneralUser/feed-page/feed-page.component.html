@@ -1,17 +1,20 @@
-<div class="feed-page-container w-full flex">
+<div
+  class="feed-page-container w-full min-h-screen bg-gradient-to-b from-blueC-50 to-blueC-100 flex items-center"
+>
   <!-- Sidebar -->
-  <div class="sidebar w-1/4 p-4">
+  <div class="sidebar w-1/4 p-4 bg-white shadow-sm rounded-lg">
     <app-sidebar-filter-post></app-sidebar-filter-post>
   </div>
 
   <!-- Main Feed Section -->
-  <div class="feed-content w-3/4 p-6">
+  <div class="feed-content w-3/4 px-6 py-6 bg-blueC-50">
     <!-- Navbar -->
-    <app-navbar (logoutClicked)="openLogoutDialog()"></app-navbar>
+    <app-navbar (logoutClicked)="openLogoutDialog()" class="mb-6"></app-navbar>
     <!-- Feed Post Container -->
     <app-feed-post-container
       [posts]="posts"
       [loadingPosts]="loadingPosts"
+      class="mt-10 mx-auto max-w-4xl bg-white rounded-lg shadow-md transition-all duration-300 ease-in-out"
     ></app-feed-post-container>
   </div>
 </div>

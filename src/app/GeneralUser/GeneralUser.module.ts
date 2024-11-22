@@ -1,5 +1,5 @@
 import { NgModule } from '@angular/core';
-import { CommonModule } from '@angular/common';
+import { CommonModule, NgOptimizedImage } from '@angular/common';
 import { GeneralUserComponent } from './GeneralUser.component';
 import { RouterModule } from '@angular/router';
 import { ProfileViewComponent } from './profile-view/profile-view.component';
@@ -15,13 +15,18 @@ import { FeedPageComponent } from './feed-page/feed-page.component';
 import { SidebarFilterPostComponent } from './sidebar-filter-post/sidebar-filter-post.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { MatDialogModule } from '@angular/material/dialog';
+import { CarouselModule } from 'primeng/carousel';
+import { InputTextareaModule } from 'primeng/inputtextarea';
 
 @NgModule({
   imports: [
     CommonModule,
     RouterModule,
     GeneralUserRoutingModule,
-    MatDialogModule
+    MatDialogModule,
+    NgOptimizedImage,
+    CarouselModule,
+    InputTextareaModule
   ],
   declarations: [
     GeneralUserComponent, ProfileViewComponent, DetailsProfileComponent,

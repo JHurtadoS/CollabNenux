@@ -1,15 +1,22 @@
 <div
-  class="feed-page-container w-full min-h-screen bg-gradient-to-b from-blueC-50 to-blueC-100 flex items-center"
+  class="feed-page-container w-full min-h-screen flex items-center shadow-sm"
 >
   <!-- Sidebar -->
-  <div class="sidebar w-1/4 p-4 bg-white shadow-sm rounded-lg">
-    <app-sidebar-filter-post></app-sidebar-filter-post>
+  <div class="sidebar w-1/4 p-4 bg-white rounded-lg self-start">
+    <app-sidebar-filter-post
+      class="w-fit flex pt-6 pl-4"
+    ></app-sidebar-filter-post>
   </div>
 
   <!-- Main Feed Section -->
-  <div class="feed-content w-3/4 px-6 py-6 bg-blueC-50">
+  <div
+    class="feed-content w-3/4 px-6 py-6 min-h-screen bg-gradient-to-b from-blueC-50 to-blueC-100"
+  >
     <!-- Navbar -->
-    <app-navbar (logoutClicked)="openLogoutDialog()" class="mb-6"></app-navbar>
+    <app-navbar
+      (logoutClicked)="openLogoutDialog()"
+      class="mb-6 h-screen"
+    ></app-navbar>
     <!-- Feed Post Container -->
     <app-feed-post-container
       [posts]="posts"

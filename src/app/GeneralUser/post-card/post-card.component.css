@@ -1,0 +1,20 @@
+.post-card-container {
+  .p-carousel-indicator button {
+    background-color: rgb(255 176 120 / var(--tw-bg-opacity)) /* #ffb078 */;
+  }
+  .p-highlight button {
+    background-color: rgb(228 90 10 / var(--tw-bg-opacity)) /* #e45a0a */;
+  }
+}
+
+.p-carousel-container,
+.p-carousel-items-container {
+  height: 350px;
+}
+
+.p-carousel-item {
+  img {
+    object-fit: contain;
+    height: -webkit-fill-available;
+  }
+}

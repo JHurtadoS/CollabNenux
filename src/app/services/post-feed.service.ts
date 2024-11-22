@@ -10,12 +10,22 @@ export interface Post {
   project_id: number;
   content: string;
   created_at: string;
+  post_date: string;
   profiles: {
     id: string;
     full_name: string;
-    avatar_url: string;
+    avatar_url: string | null; // Puede ser `null` si no hay avatar
+    bio?: string; // Campo opcional para la biografía
+    username?: string | null; // Campo opcional para el nombre de usuario
   };
+  post_images: Array<{
+    id: number;
+    post_id: number;
+    image_url: string;
+    created_at: string;
+  }>;
 }
+
 
 @Injectable({
   providedIn: 'root'
